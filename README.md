@@ -1,41 +1,40 @@
-
-```markdown
+````markdown
 # 📘 ProjetoAPSarqSoftware
 
-API RESTful construída com Node.js, Express e MongoDB, utilizando princípios sólidos de Arquitetura de Software. Este projeto simula um backend robusto e escalável para gerenciamento de **usuários**, **autores** e **postagens**.
+**API RESTful** construída com **Node.js**, **Express** e **MongoDB**, aplicando princípios sólidos de Arquitetura de Software.  
+O sistema simula um backend robusto e escalável para gerenciamento de **usuários**, **autores** e **postagens**.
 
 ---
 
-## 🎯 Objetivo Acadêmico
+## 🎓 Objetivo Acadêmico
 
-Este projeto foi desenvolvido como parte da disciplina de Arquitetura de Software, com o objetivo de aplicar conceitos práticos como:
+Projeto realizado como parte da disciplina de **Arquitetura de Software**, com foco na aplicação prática dos seguintes conceitos:
 
-- Arquitetura em múltiplas camadas
-- Princípios SOLID
-- Inversão de dependência (services → repositories)
-- Separação de responsabilidades
-- Utilização de middlewares, DTOs e Swagger
+- 🧱 Arquitetura em múltiplas camadas
+- 🧠 Princípios SOLID
+- ♻️ Inversão de dependência (`services` → `repositories`)
+- 🧩 Separação de responsabilidades
+- ⚙️ Utilização de Middlewares, DTOs e Swagger
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-| Tecnologia     | Finalidade                              |
+| 🧰 Tecnologia   | 📝 Finalidade                            |
 |----------------|------------------------------------------|
 | **Node.js**    | Ambiente de execução JavaScript          |
 | **Express**    | Framework web minimalista                |
 | **MongoDB**    | Banco de dados NoSQL                     |
 | **Mongoose**   | ODM para modelagem dos dados             |
-| **Swagger**    | Documentação da API                      |
+| **Swagger**    | Documentação interativa da API           |
 | **Dotenv**     | Variáveis de ambiente                    |
-| **Nodemon**    | Hot reload durante o desenvolvimento     |
+| **Nodemon**    | Hot reload no ambiente de desenvolvimento|
 
 ---
 
-## 🧠 Estrutura de Pastas
+## 🗂️ Estrutura de Pastas
 
-```
-
+```bash
 ProjetoAPSarqSoftware/
 │
 ├── src/
@@ -48,23 +47,23 @@ ProjetoAPSarqSoftware/
 │   ├── routes/                # Definição das rotas da API
 │   └── services/              # Lógica de negócio entre controller ↔ repo
 │
-├── app.js                     # Configuração do app Express
+├── app.js                     # Configuração principal do Express
 ├── server.js                  # Ponto de entrada do servidor
 ├── package.json
 └── README.md
-
 ````
 
 ---
 
 ## 📦 Instalação e Execução
 
-### ✅ Pré-requisitos:
-- Node.js instalado
-- MongoDB local ou MongoDB Atlas
-- Postman ou Insomnia para testar
+### ✅ Pré-requisitos
 
-### 💻 Passos:
+* [Node.js](https://nodejs.org/)
+* MongoDB (local ou via MongoDB Atlas)
+* Postman ou Insomnia (para testes)
+
+### 🛠️ Passos para rodar o projeto
 
 ```bash
 # Clone o repositório
@@ -74,11 +73,11 @@ cd ProjetoAPSarqSoftware
 # Instale as dependências
 npm install
 
-# Configure suas variáveis de ambiente
+# Crie o arquivo .env e adicione suas variáveis
 touch .env
-````
+```
 
-#### Exemplo `.env`
+#### 🔐 Exemplo `.env`
 
 ```env
 PORT=3000
@@ -86,33 +85,31 @@ MONGODB_URI=mongodb://localhost:27017/aps_database
 JWT_SECRET=seusegredoaqui
 ```
 
-### ▶️ Rodar servidor:
+### ▶️ Rodar servidor em modo desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-A aplicação estará disponível em: `http://localhost:3000`
+Acesse: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 📌 Endpoints REST
-
-Abaixo, os principais módulos da API:
+## 🔗 Endpoints REST
 
 ### 🔐 Autenticação
 
-* `POST /auth/login` → Login com geração de token JWT
-* Middleware de autenticação em rotas protegidas
+* `POST /auth/login` → Login e geração de token JWT
+* Middleware para rotas protegidas
 
 ### 👤 Usuários
 
 * `GET /users` → Listar todos os usuários
 * `POST /users` → Criar usuário
 * `PUT /users/:id` → Atualizar usuário
-* `DELETE /users/:id` → Deletar usuário
+* `DELETE /users/:id` → Remover usuário
 
-### 🖊️ Autores
+### ✍️ Autores
 
 * `GET /authors`
 * `POST /authors`
@@ -126,12 +123,12 @@ Abaixo, os principais módulos da API:
 * `PUT /posts/:id`
 * `DELETE /posts/:id`
 
-> Todas as rotas são documentadas automaticamente via Swagger em:
-> 📄 `http://localhost:3000/api-docs`
+📑 **Documentação Swagger disponível em:**
+[http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
 ---
 
-## 📄 Exemplos de DTOs
+## 🧾 Exemplos de DTOs
 
 ```ts
 // userDto.js
@@ -153,9 +150,9 @@ Abaixo, os principais módulos da API:
 
 ---
 
-## 🔐 Middleware de Autenticação
+## 🔒 Middleware de Autenticação
 
-As rotas protegidas usam `authMiddleware.js`, que valida o token JWT enviado no header `Authorization`.
+As rotas protegidas utilizam o middleware `authMiddleware.js`, que valida o token JWT via header:
 
 ```http
 Authorization: Bearer <seu-token-jwt>
@@ -165,28 +162,26 @@ Authorization: Bearer <seu-token-jwt>
 
 ## ✅ Boas Práticas Aplicadas
 
-* ✔️ **Arquitetura em Camadas** (Controller → Service → Repository)
-* ✔️ **Uso de DTOs** para transferência segura de dados
-* ✔️ **Swagger** para documentação de rotas
-* ✔️ **JWT** para autenticação e proteção de rotas
-* ✔️ **Repository Pattern** para desacoplar acesso a dados
-* ✔️ Modularização para escalabilidade
+* ✔️ Arquitetura em Camadas (Controller → Service → Repository)
+* ✔️ Uso de DTOs para validação e transporte de dados
+* ✔️ Swagger para documentação de rotas
+* ✔️ JWT para autenticação segura
+* ✔️ Repository Pattern
+* ✔️ Separação clara de responsabilidades
 
 ---
 
+## 📚 Contexto Acadêmico
 
----
+Projeto acadêmico desenvolvido em **2025** pelos alunos do **7º período de Bacharelado em Engenharia de Software** da **Faculdade UNISENAI – São José dos Pinhais**, com o apoio do professor em sala de aula.
 
-📚 Contexto Acadêmico
-Este projeto foi desenvolvido em sala de aula com o auxílio do professor e dos alunos do 7° período do curso de Bacharelado em Engenharia de Software da Faculdade UNISENAI, campus São José dos Pinhais, durante o ano de 2025.
-
-O trabalho teve como objetivo aplicar conceitos práticos de Arquitetura de Software, organização em camadas, uso de padrões de projeto e desenvolvimento de APIs RESTful com tecnologias modernas do ecossistema Node.js.
+O objetivo foi a aplicação prática dos conceitos de Arquitetura de Software por meio do desenvolvimento de uma **API RESTful modularizada e escalável**.
 
 ---
 
 ## 📄 Licença
 
-Projeto acadêmico sem fins lucrativos.
-Distribuído para fins educacionais.
+Projeto de uso **exclusivamente educacional**, sem fins lucrativos.
+Distribuído sob os termos da licença acadêmica.
 
 ---
