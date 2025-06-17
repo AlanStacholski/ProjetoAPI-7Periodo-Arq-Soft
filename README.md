@@ -133,8 +133,8 @@ Acesse: [http://localhost:3000](http://localhost:3000)
 ```ts
 // userDto.js
 {
-  name: "João",
-  email: "joao@email.com",
+  name: "Dimas de Souza",
+  email: "xavier@email.com",
   password: "123456"
 }
 ```
@@ -142,8 +142,8 @@ Acesse: [http://localhost:3000](http://localhost:3000)
 ```ts
 // postDto.js
 {
-  title: "Meu primeiro post",
-  content: "Conteúdo do post...",
+  title: "Meu primeiro post - Pesca em Rios Paranaenses",
+  content: "Conteúdo do post - traíra, jundiá, lambari, cará, dourado, pintado, piau, piapara, pacu ...",
   authorId: "65ab12cd34ef567..."
 }
 ```
