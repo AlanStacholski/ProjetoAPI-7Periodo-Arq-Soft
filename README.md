@@ -1,4 +1,3 @@
-````markdown
 # 📘 ProjetoAPSarqSoftware
 
 **API RESTful** construída com **Node.js**, **Express** e **MongoDB**, aplicando princípios sólidos de Arquitetura de Software.  
@@ -17,6 +16,8 @@ Projeto realizado como parte da disciplina de **Arquitetura de Software**, com f
 - ⚙️ Utilização de Middlewares, DTOs e Swagger
 
 ---
+
+````markdown
 
 ## 🚀 Tecnologias Utilizadas
 
