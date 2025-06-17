@@ -17,9 +17,8 @@ Projeto realizado como parte da disciplina de **Arquitetura de Software**, com f
 
 ---
 
-````markdown
-
 ## 🚀 Tecnologias Utilizadas
+````markdown
 
 | 🧰 Tecnologia   | 📝 Finalidade                            |
 |----------------|------------------------------------------|
@@ -32,7 +31,7 @@ Projeto realizado como parte da disciplina de **Arquitetura de Software**, com f
 | **Nodemon**    | Hot reload no ambiente de desenvolvimento|
 
 ---
-
+````
 ## 🗂️ Estrutura de Pastas
 
 ```bash
@@ -52,7 +51,7 @@ ProjetoAPSarqSoftware/
 ├── server.js                  # Ponto de entrada do servidor
 ├── package.json
 └── README.md
-````
+```
 
 ---
 
